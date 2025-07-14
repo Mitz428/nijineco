@@ -1,0 +1,98 @@
+body,
+.about-main {
+  background: #fff;
+  color: #222;
+}
+
+.about-main {
+  max-width: 700px;
+  margin: 7rem auto 0 auto;
+  padding: 2.5rem 1rem 3rem 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.about-main h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.about-main p {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.about-main-img {
+  display: block;
+  margin: 2rem auto 1.5rem auto;
+  width: 240px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+.about-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.about-lead {
+  font-size: 1.08rem;
+  color: #222;
+  text-align: left;
+  line-height: 2.1;
+  margin-bottom: 0;
+  white-space: pre-line;
+}
+
+.about-footer {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-footer img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .about-main {
+    padding: 1.2rem 0.5rem 2rem 0.5rem;
+    max-width: 98vw;
+  }
+
+  .about-main-img {
+    width: 160px;
+    height: auto;
+    margin: 1.2rem auto 1rem auto;
+  }
+
+  .about-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-lead {
+    font-size: 0.97rem;
+    line-height: 1.8;
+  }
+
+  .about-main h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .about-main p {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+}
