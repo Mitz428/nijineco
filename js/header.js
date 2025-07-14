@@ -8,9 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then(html => {
       document.querySelector('header').innerHTML = html;
-      setupMobileMenu();
     })
     .catch(e => {
       console.error('ヘッダーの読み込みに失敗しました:', e);
     });
 });
+
+// モバイルメニュー（将来的な実装）
+var mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+if (mobileMenuBtn) {
+  mobileMenuBtn.addEventListener('click', function () {
+    // モバイルメニューの実装
+    alert('モバイルメニュー機能は開発中です。');
+  });
+}

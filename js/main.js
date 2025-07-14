@@ -43,14 +43,60 @@ window.addEventListener('scroll', () => {
 });
 
 // フォーム送信処理
-document.querySelector('.contact-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  alert('お問い合わせありがとうございます。後日担当者よりご連絡いたします。');
-  this.reset();
-});
+var contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('お問い合わせありがとうございます。後日担当者よりご連絡いたします。');
+    this.reset();
+  });
+}
 
 // モバイルメニュー（将来的な実装）
-document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
-  // モバイルメニューの実装
-  alert('モバイルメニュー機能は開発中です。');
-});
+var mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+if (mobileMenuBtn) {
+  mobileMenuBtn.addEventListener('click', function () {
+    alert('モバイルメニュー機能は開発中です。');
+  });
+}
+
+// スライドショー
+(function() {
+  var slideshow = document.getElementById('slideshow');
+  if (!slideshow) return;
+  var wrapper = slideshow.querySelector('.slides-wrapper');
+  var slides = wrapper.querySelectorAll('img');
+  var slideWidth = 800;
+  var total = slides.length;
+  var current = 1; // 1枚目（クローンを考慮）
+
+  // 初期位置
+  wrapper.style.transform = 'translateX(' + (-slideWidth * current) + 'px)';
+
+  function showSlide(index, animate = true) {
+    if (!animate) {
+      wrapper.style.transition = 'none';
+    } else {
+      wrapper.style.transition = 'transform 0.7s cubic-bezier(.77,0,.18,1)';
+    }
+    wrapper.style.transform = 'translateX(' + (-slideWidth * index) + 'px)';
+    if (!animate) {
+      // 強制再描画
+      void wrapper.offsetWidth;
+      wrapper.style.transition = 'transform 0.7s cubic-bezier(.77,0,.18,1)';
+    }
+  }
+
+  function nextSlide() {
+    current++;
+    showSlide(current);
+    if (current === total - 1) {
+      setTimeout(function() {
+        current = 1;
+        showSlide(current, false);
+      }, 700);
+    }
+  }
+
+  setInterval(nextSlide, 3000);
+})();
