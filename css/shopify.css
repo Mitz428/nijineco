@@ -1,0 +1,224 @@
+.shopify-main {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #f8fafc;
+  color: #222;
+}
+
+.shopify-hero {
+  background: linear-gradient(120deg, #e0e7ff 0%, #f0fdfa 100%);
+  padding: 7rem 0 2rem 0;
+  text-align: center;
+}
+
+.shopify-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.shopify-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #16a34a;
+}
+
+.shopify-hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  padding: 0 12px 0 12px;
+}
+
+.shopify-hero-img {
+  width: 180px;
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+.shopify-features {
+  background: #fff;
+  padding: 2.5rem 0 2rem 0;
+  text-align: center;
+}
+
+.shopify-features h2 {
+  font-size: 1.5rem;
+  color: #16a34a;
+  margin-bottom: 1.2rem;
+}
+
+.shopify-feature-list {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  list-style: disc inside;
+  font-size: 1.05rem;
+}
+
+.shopify-feature-list li {
+  margin-bottom: 0.7em;
+}
+
+.shopify-plan {
+  background: #f1f5f9;
+  padding: 3.5rem 0 3rem 0;
+  text-align: center;
+}
+
+.shopify-plan h2 {
+  font-size: 2.1rem;
+  color: #16a34a;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.shopify-plan-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.shopify-plan-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(22, 163, 74, 0.10);
+  min-width: 260px;
+  max-width: 340px;
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #bbf7d0;
+}
+
+.shopify-plan-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(22, 163, 74, 0.18);
+  border-color: #16a34a;
+}
+
+.shopify-plan-card .plan-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #16a34a;
+  margin-bottom: 0.7rem;
+}
+
+.shopify-plan-card .plan-desc {
+  font-size: 1.05rem;
+  margin-bottom: 0.7rem;
+  color: #333;
+}
+
+.shopify-plan-card .plan-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #065f46;
+  margin-bottom: 0.5rem;
+}
+
+.shopify-plan-note {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.shopify-faq {
+  background: #fff;
+  padding: 2.5rem 0 3rem 0;
+  text-align: center;
+}
+
+.shopify-faq h2 {
+  font-size: 1.5rem;
+  color: #16a34a;
+  margin-bottom: 1.2rem;
+}
+
+.shopify-faq-list {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+.shopify-faq-item {
+  border-bottom: 1px solid #bbf7d0;
+}
+
+.shopify-faq-question {
+  cursor: pointer;
+  font-weight: 600;
+  color: #16a34a;
+  padding: 1.1em 0 1.1em 0.5em;
+  position: relative;
+  transition: background 0.2s;
+  font-size: 1.08rem;
+}
+
+.shopify-faq-question::after {
+  content: '＋';
+  position: absolute;
+  right: 1em;
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+
+.shopify-faq-item.open .shopify-faq-question::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+.shopify-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(.4, 0, .2, 1), padding 0.3s;
+  background: #f8fafc;
+  padding: 0 1em;
+  font-size: 1rem;
+}
+
+.shopify-faq-item.open .shopify-faq-answer {
+  max-height: 200px;
+  padding: 1em 1em 1.2em 1em;
+}
+
+@media (max-width: 600px) {
+  .shopify-hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .shopify-hero-img {
+    width: 120px;
+  }
+
+  .shopify-feature-list {
+    font-size: 0.97rem;
+    max-width: 90%;
+  }
+
+  .shopify-plan h2 {
+    font-size: 1.3rem;
+  }
+
+  .shopify-plan-card {
+    min-width: 90vw;
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+
+  .shopify-plan-note {
+    font-size: 0.8rem;
+    padding: 0 12px 0 12px;
+  }
+
+  .shopify-faq-list {
+    max-width: 90%;
+  }
+
+  .shopify-faq-question {
+    font-size: 1rem;
+  }
+}
