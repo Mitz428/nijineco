@@ -65,8 +65,7 @@ body,
 
 @media (max-width: 600px) {
   .about-main {
-    padding: 1.2rem 0.5rem 2rem 0.5rem;
-    max-width: 98vw;
+    padding: 1.2rem 2rem 2rem 2rem;
   }
 
   .about-main-img {

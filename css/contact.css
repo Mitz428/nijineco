@@ -1,0 +1,135 @@
+body,
+.contact-main {
+  background: #fff;
+  color: #222;
+}
+
+.contact-main {
+  max-width: 700px;
+  margin: 7rem auto 0 auto;
+  padding: 2.5rem 1rem 3rem 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.contact-content {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(37,99,235,0.07);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-content h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.contact-content p {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  line-height: 2;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2563eb;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.7em 1em;
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f8fafc;
+  color: #222;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 1.5px solid #2563eb;
+  outline: none;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.policy-check {
+  display: flex;
+  align-items: center;
+  font-size: 0.98rem;
+  margin-bottom: 2rem;
+}
+.policy-check input[type="checkbox"] {
+  margin-right: 0.5em;
+  width: 1.1em;
+  height: 1.1em;
+}
+.policy-check label {
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 0;
+}
+.policy-check a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.9em 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.submit-btn:hover {
+  background: #1e40af;
+}
+
+@media (max-width: 600px) {
+  .contact-main {
+    padding: 0 2rem 2rem 2rem;
+  }
+  .contact-content {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .contact-content h1 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .contact-content p {
+    font-size: 0.97rem;
+    margin-bottom: 1.2rem;
+  }
+  .submit-btn {
+    font-size: 1rem;
+    padding: 0.7em 0;
+  }
+}
