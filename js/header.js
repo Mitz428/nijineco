@@ -7,9 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.text();
     })
     .then(html => {
-      document.querySelector('header').innerHTML = html;
-      // ハンバーガーメニューの初期化
-      initMobileMenu();
+      const header = document.querySelector('header');
+      if (header) {
+        header.innerHTML = html;
+        header.style.display = 'block';
+        initMobileMenu();
+      } else {
+        throw new Error('header要素が見つかりません');
+      }
     })
     .catch(e => {
       console.error('ヘッダーの読み込みに失敗しました:', e);
@@ -23,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         navMenu.classList.toggle('open');
         mobileMenuBtn.classList.toggle('active');
       });
-      // メニューリンククリックで自動的に閉じる
       navMenu.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('click', function() {
           navMenu.classList.remove('open');

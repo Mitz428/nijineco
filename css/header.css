@@ -6,6 +6,7 @@ header {
   backdrop-filter: blur(10px);
   z-index: 1000;
   transition: all 0.3s ease;
+  display: none;
 }
 
 .header-container {
